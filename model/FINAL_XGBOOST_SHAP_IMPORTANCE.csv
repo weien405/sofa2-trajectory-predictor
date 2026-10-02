@@ -1,0 +1,9 @@
+feature,display_name,mean_absolute_SHAP
+chronic_liver_disease,Chronic liver disease,0.65068156
+vasopressor_any_0_24h,Vasopressor use,0.5614719
+BUN,Blood urea nitrogen,0.32754052
+hematocrit,Hematocrit,0.28121874
+invasive_mechanical_ventilation_0_24h,Invasive mechanical ventilation,0.26863655
+heart_rate,Heart rate,0.25656366
+systolic_bp,Systolic blood pressure,0.1561629
+RRT_any_0_24h,Renal replacement therapy,0.0

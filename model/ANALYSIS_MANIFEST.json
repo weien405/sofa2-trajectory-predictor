@@ -1,0 +1,58 @@
+{
+  "analysis": "Binary unfavorable SOFA-2 trajectory prediction only",
+  "cohort_n": 637,
+  "unfavorable_n": 129,
+  "target": "Class 3 Persistent-high + Class 4 Worsening versus Class 1 Low/stable + Class 2 Improving",
+  "train_n": 445,
+  "train_unfavorable_n": 90,
+  "heldout_test_n": 192,
+  "heldout_unfavorable_n": 39,
+  "candidate_predictor_n": 20,
+  "boruta_selected_n": 8,
+  "boruta_selected_features": [
+    "chronic_liver_disease",
+    "vasopressor_any_0_24h",
+    "invasive_mechanical_ventilation_0_24h",
+    "hematocrit",
+    "BUN",
+    "RRT_any_0_24h",
+    "heart_rate",
+    "systolic_bp"
+  ],
+  "models": [
+    "Logistic regression",
+    "XGBoost",
+    "AdaBoost",
+    "GBM",
+    "SVM",
+    "KNN",
+    "Naive Bayes",
+    "MLP"
+  ],
+  "nested_cv": "5-fold x 3 repeats; 4-fold inner tuning",
+  "selection_rule": "Within 0.02 of top nested-CV AUROC; calibration/Brier and interpretability break ties",
+  "selected_model_training_only": "XGBoost",
+  "selection_reason": "Among models within 0.02 of the best nested-CV AUROC, the selected model had the best Brier score, with calibration-slope error and AUROC used as tie-breakers.",
+  "decision_threshold_source": "Maximum Youden index from selected model nested OOF training predictions",
+  "decision_threshold": 0.20025869210561117,
+  "heldout_metrics_selected_model": {
+    "AUROC": 0.783308195072901,
+    "AUPRC": 0.43976756757588675,
+    "Brier": 0.1400637924671173,
+    "log_loss": 0.42974960357551356,
+    "calibration_intercept": -0.05343837832485985,
+    "calibration_slope": 0.8132734026103892
+  },
+  "heldout_AUROC_CI": [
+    0.7048796713615214,
+    0.8511118941636401
+  ],
+  "heldout_AUPRC_CI": [
+    0.30977046719361107,
+    0.60242473255475
+  ],
+  "data_resplit": false,
+  "test_used_for_selection": false,
+  "four_class_used_in_manuscript_or_supplement": false,
+  "mortality_or_followup_used_as_predictor": false
+}
