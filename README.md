@@ -5,6 +5,16 @@ MIMIC-IV landmark-cohort analysis. It estimates unfavorable SOFA-2 trajectory
 membership (Class 3 persistent-high or Class 4 worsening) versus
 non-unfavorable membership (Class 1 low/stable or Class 2 improving).
 
+## Live application
+
+The public research prototype is available at:
+
+https://sofa2-trajectory-predictor-gzhp3dybsebvv3g9lcomrr.streamlit.app/
+
+Source repository:
+
+https://github.com/weien405/sofa2-trajectory-predictor
+
 ## Run locally
 
 1. Open this folder.
@@ -17,13 +27,10 @@ non-unfavorable membership (Class 1 low/stable or Class 2 improving).
 
 3. Open the local URL shown in the terminal (normally `http://localhost:8501`).
 
-## Deploy to Streamlit Community Cloud
+## Deployment
 
-1. Put this complete folder in a private or public GitHub repository. Keep the
-   `model` directory beside `streamlit_app.py`.
-2. In Streamlit Community Cloud, create a new app and select
-   `streamlit_app.py` as the entrypoint.
-3. Select Python 3.12 in Advanced settings and deploy.
+The application is deployed from the `main` branch with `streamlit_app.py` as
+the entrypoint. The `model` directory must remain beside the entrypoint file.
 
 The exact package versions used for verification are pinned in
 `requirements.txt`. No patient-level development data are included in this app.
